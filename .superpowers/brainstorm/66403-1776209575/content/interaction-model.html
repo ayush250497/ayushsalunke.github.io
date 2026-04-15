@@ -1,0 +1,76 @@
+<h2>How does content appear when you click an object?</h2>
+<p class="subtitle">Developer's Room confirmed. You click the monitor, bookshelf, whiteboard... then what?</p>
+
+<div class="cards">
+
+  <div class="card" data-choice="overlay" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#0f0f1a;padding:16px;font-family:system-ui;height:190px;overflow:hidden;position:relative">
+      <!-- Room fades -->
+      <div style="position:absolute;inset:0;background:#0f0f1a;opacity:0.85"></div>
+      <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:12px">
+        <!-- Panel slides in from right -->
+        <div style="background:linear-gradient(135deg,#1e1e3f,#12122a);border:1px solid #667eea44;border-radius:10px;padding:16px;width:100%;max-width:220px;box-shadow:0 0 30px #667eea22">
+          <div style="font-size:9px;color:#667eea;font-weight:700;letter-spacing:2px;margin-bottom:8px">EXPERIENCE</div>
+          <div style="font-size:13px;font-weight:800;color:#fff;margin-bottom:4px">JP Morgan Chase</div>
+          <div style="font-size:9px;color:#a0a0c0;margin-bottom:8px">Lead Software Engineer · Jun 2022 – Present</div>
+          <div style="height:2px;background:linear-gradient(90deg,#667eea,#764ba2);border-radius:1px;margin-bottom:8px"></div>
+          <div style="font-size:8px;color:#8080a0;line-height:1.5">→ 200+ devs deployment platform<br>→ 70% reduction in complexity<br>→ 75% faster CI/CD</div>
+          <div style="margin-top:10px;text-align:right;font-size:8px;color:#667eea44">press ESC to close</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>Slide-in Panel</h3>
+      <p>Room dims, elegant panel slides in from the side. Clean, readable. Room stays visible in background. Best for dense info like experience bullets.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="zoom" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#0f0f1a;padding:16px;font-family:system-ui;height:190px;overflow:hidden;position:relative">
+      <!-- Zoomed-in monitor -->
+      <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center">
+        <div style="background:#0a0a1a;border:3px solid #667eea;border-radius:6px;width:85%;height:75%;display:flex;align-items:center;justify-content:center;box-shadow:0 0 40px #667eea33;position:relative">
+          <div style="text-align:center;padding:12px">
+            <div style="font-size:9px;color:#667eea;font-weight:700;letter-spacing:2px;margin-bottom:6px">MONITOR → EXPERIENCE</div>
+            <div style="font-size:13px;font-weight:800;color:#fff">JP Morgan Chase</div>
+            <div style="font-size:8px;color:#8080a0;margin-top:4px">Camera flies into the screen</div>
+          </div>
+          <div style="position:absolute;top:6px;right:8px;font-size:8px;color:#667eea44">[ click anywhere to zoom out ]</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>Camera Zoom-In</h3>
+      <p>Camera flies into the clicked object — zoom into monitor screen, zoom into whiteboard. Very immersive. Takes over the full view while inside.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="tooltip-expand" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#0f0f1a;padding:12px;font-family:system-ui;height:190px;overflow:hidden;position:relative">
+      <!-- Room stays, tooltip above object -->
+      <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px">
+        <!-- Floating card above object -->
+        <div style="background:#1e1e3f;border:1px solid #667eea66;border-radius:8px;padding:10px;width:160px;box-shadow:0 -4px 20px #667eea22">
+          <div style="font-size:9px;color:#667eea;font-weight:700;margin-bottom:4px">🖥 MONITOR</div>
+          <div style="font-size:11px;font-weight:700;color:#fff">Experience</div>
+          <div style="font-size:8px;color:#8080a0;margin-top:2px">JPMC · UBS · 6+ years</div>
+          <div style="margin-top:6px;display:flex;gap:4px">
+            <span style="background:#667eea22;color:#667eea;border-radius:3px;padding:2px 6px;font-size:7px">Lead SWE</span>
+            <span style="background:#764ba222;color:#a78bfa;border-radius:3px;padding:2px 6px;font-size:7px">GCP</span>
+          </div>
+        </div>
+        <!-- Connector line -->
+        <div style="width:2px;height:12px;background:linear-gradient(180deg,#667eea,transparent)"></div>
+        <!-- Object indicator -->
+        <div style="width:40px;height:26px;background:#0a0a1a;border:2px solid #667eea;border-radius:3px;display:flex;align-items:center;justify-content:center">
+          <div style="font-size:8px;color:#667eea">💻</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>Floating Card on Hover</h3>
+      <p>Hover shows a floating card above the object. Click to expand full detail. Room always fully visible. Lighter, quicker to skim.</p>
+    </div>
+  </div>
+
+</div>

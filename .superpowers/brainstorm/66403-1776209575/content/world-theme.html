@@ -1,0 +1,96 @@
+<h2>What world does the visitor explore?</h2>
+<p class="subtitle">Bruno Simon = drive a car, discover content. Same mechanic — different world. Pick the theme.</p>
+
+<div class="cards">
+
+  <div class="card" data-choice="city" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:linear-gradient(180deg,#1a1a2e 0%,#16213e 100%);padding:20px;font-family:system-ui;height:190px;overflow:hidden;position:relative">
+      <!-- Sky -->
+      <div style="position:absolute;top:8px;right:12px;font-size:10px;color:rgba(255,255,255,0.3)">★ ✦ ★</div>
+      <!-- Ground grid -->
+      <div style="position:absolute;bottom:0;left:0;right:0;height:80px;background:linear-gradient(180deg,transparent,#0d0d1a);display:flex;align-items:flex-end;padding:8px 12px;gap:6px">
+        <!-- Buildings -->
+        <div style="width:20px;height:55px;background:#1e3a5f;border-radius:2px 2px 0 0;margin-top:auto"></div>
+        <div style="width:14px;height:35px;background:#243b6e;border-radius:2px 2px 0 0;margin-top:auto"></div>
+        <div style="width:18px;height:70px;background:#1a2f52;border-radius:2px 2px 0 0;margin-top:auto;position:relative">
+          <div style="position:absolute;top:8px;left:3px;right:3px;height:4px;background:#4a9eff33;border-radius:1px"></div>
+          <div style="position:absolute;top:18px;left:3px;right:3px;height:4px;background:#4a9eff33;border-radius:1px"></div>
+        </div>
+        <div style="width:22px;height:45px;background:#152845;border-radius:2px 2px 0 0;margin-top:auto"></div>
+        <div style="width:16px;height:60px;background:#1e3a5f;border-radius:2px 2px 0 0;margin-top:auto"></div>
+        <div style="flex:1"></div>
+        <!-- Car -->
+        <div style="width:28px;height:12px;background:#667eea;border-radius:3px;margin-bottom:4px;position:relative">
+          <div style="position:absolute;top:-5px;left:5px;width:16px;height:7px;background:#5a6fd6;border-radius:2px 2px 0 0"></div>
+        </div>
+      </div>
+      <!-- Signs -->
+      <div style="position:absolute;top:40px;left:20px;background:#667eea;color:#fff;font-size:9px;padding:3px 7px;border-radius:3px;font-weight:700">EXPERIENCE</div>
+      <div style="position:absolute;top:40px;right:20px;background:#764ba2;color:#fff;font-size:9px;padding:3px 7px;border-radius:3px;font-weight:700">PROJECTS</div>
+    </div>
+    <div class="card-body">
+      <h3>Night City</h3>
+      <p>Drive through a low-poly city at night. Buildings = sections (Experience tower, Skills district, Projects plaza). Urban, professional, memorable.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="space" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:radial-gradient(ellipse at center,#0a0a2e 0%,#000 100%);padding:20px;font-family:system-ui;height:190px;overflow:hidden;position:relative">
+      <!-- Stars -->
+      <div style="position:absolute;inset:0;overflow:hidden">
+        <div style="position:absolute;top:15%;left:20%;width:3px;height:3px;background:#fff;border-radius:50%;opacity:0.8"></div>
+        <div style="position:absolute;top:30%;left:70%;width:2px;height:2px;background:#fff;border-radius:50%;opacity:0.6"></div>
+        <div style="position:absolute;top:60%;left:40%;width:2px;height:2px;background:#fff;border-radius:50%;opacity:0.9"></div>
+        <div style="position:absolute;top:20%;left:50%;width:2px;height:2px;background:#fff;border-radius:50%;opacity:0.5"></div>
+        <div style="position:absolute;top:70%;left:80%;width:3px;height:3px;background:#fff;border-radius:50%;opacity:0.7"></div>
+      </div>
+      <!-- Planets -->
+      <div style="position:absolute;top:20px;left:30px;width:40px;height:40px;background:radial-gradient(circle at 35% 35%,#667eea,#3730a3);border-radius:50%;box-shadow:0 0 15px #667eea44">
+        <div style="position:absolute;bottom:-14px;left:50%;transform:translateX(-50%);font-size:7px;color:#667eea;white-space:nowrap">EXPERIENCE</div>
+      </div>
+      <div style="position:absolute;top:15px;right:30px;width:28px;height:28px;background:radial-gradient(circle at 35% 35%,#a855f7,#6b21a8);border-radius:50%;box-shadow:0 0 12px #a855f744">
+        <div style="position:absolute;bottom:-12px;left:50%;transform:translateX(-50%);font-size:7px;color:#a855f7;white-space:nowrap">PROJECTS</div>
+      </div>
+      <div style="position:absolute;bottom:40px;left:50%;transform:translateX(-50%);width:22px;height:22px;background:radial-gradient(circle at 35% 35%,#34d399,#065f46);border-radius:50%;box-shadow:0 0 10px #34d39944">
+        <div style="position:absolute;bottom:-12px;left:50%;transform:translateX(-50%);font-size:7px;color:#34d399;white-space:nowrap">SKILLS</div>
+      </div>
+      <!-- Rocket/ship -->
+      <div style="position:absolute;bottom:20px;right:25px;font-size:18px">🚀</div>
+    </div>
+    <div class="card-body">
+      <h3>Space Explorer</h3>
+      <p>Navigate a spaceship through the cosmos. Planets = sections. Fits the "systems at scale" narrative. Very unique for a SWE portfolio.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="office" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#1a1a2e;padding:20px;font-family:system-ui;height:190px;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center">
+      <!-- Isometric room sketch -->
+      <div style="position:relative;width:160px;height:120px">
+        <!-- Floor -->
+        <div style="position:absolute;bottom:0;left:0;right:0;height:50px;background:#16213e;border-radius:4px;transform:perspective(200px) rotateX(30deg)"></div>
+        <!-- Desk -->
+        <div style="position:absolute;bottom:35px;left:20px;width:100px;height:12px;background:#1e3a5f;border-radius:2px;box-shadow:0 4px 0 #0d1e33"></div>
+        <!-- Monitor -->
+        <div style="position:absolute;bottom:47px;left:40px;width:40px;height:28px;background:#0a0a1a;border:2px solid #667eea;border-radius:2px;display:flex;align-items:center;justify-content:center">
+          <div style="font-size:7px;color:#667eea;font-weight:700">WORK</div>
+        </div>
+        <!-- Books -->
+        <div style="position:absolute;bottom:47px;left:20px;display:flex;gap:2px">
+          <div style="width:6px;height:16px;background:#667eea;border-radius:1px"></div>
+          <div style="width:6px;height:12px;background:#764ba2;border-radius:1px"></div>
+          <div style="width:6px;height:18px;background:#4a9eff;border-radius:1px"></div>
+        </div>
+        <!-- Plant -->
+        <div style="position:absolute;bottom:47px;right:25px;font-size:16px">🌿</div>
+        <!-- Character -->
+        <div style="position:absolute;bottom:48px;left:75px;font-size:14px">🧑‍💻</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>Developer's Room</h3>
+      <p>Walk around an isometric 3D room. Click desk for experience, bookshelf for skills, whiteboard for projects. Cozy, personal, relatable.</p>
+    </div>
+  </div>
+
+</div>

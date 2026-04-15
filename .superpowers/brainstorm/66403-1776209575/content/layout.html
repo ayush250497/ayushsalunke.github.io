@@ -1,0 +1,92 @@
+<h2>How should it scroll?</h2>
+<p class="subtitle">Bold Modern confirmed. Now pick the page structure.</p>
+
+<div class="cards">
+
+  <div class="card" data-choice="fullpage" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#1a1a2e;padding:16px;font-family:system-ui;height:180px;overflow:hidden">
+      <div style="display:flex;gap:6px;margin-bottom:10px">
+        <div style="width:60px;height:4px;background:#667eea;border-radius:2px"></div>
+        <div style="width:40px;height:4px;background:rgba(255,255,255,0.2);border-radius:2px"></div>
+        <div style="width:40px;height:4px;background:rgba(255,255,255,0.2);border-radius:2px"></div>
+        <div style="width:40px;height:4px;background:rgba(255,255,255,0.2);border-radius:2px"></div>
+      </div>
+      <div style="background:linear-gradient(135deg,#667eea,#764ba2);border-radius:8px;padding:16px;margin-bottom:8px">
+        <div style="font-size:22px;font-weight:900;color:#fff;letter-spacing:-0.5px">AYUSH SALUNKE</div>
+        <div style="font-size:10px;color:rgba(255,255,255,0.7);margin-top:4px">Senior Software Engineer</div>
+      </div>
+      <div style="display:flex;gap:4px;justify-content:center">
+        <div style="width:8px;height:8px;background:#667eea;border-radius:50%"></div>
+        <div style="width:8px;height:8px;background:rgba(255,255,255,0.2);border-radius:50%"></div>
+        <div style="width:8px;height:8px;background:rgba(255,255,255,0.2);border-radius:50%"></div>
+        <div style="width:8px;height:8px;background:rgba(255,255,255,0.2);border-radius:50%"></div>
+      </div>
+      <div style="font-size:9px;color:rgba(255,255,255,0.4);text-align:center;margin-top:6px">scroll or arrow key → next section</div>
+    </div>
+    <div class="card-body">
+      <h3>Full-Page Sections</h3>
+      <p>Each section snaps to full viewport. Very immersive — scroll wheel or arrow keys jump between Hero → Experience → Skills → Projects → Contact. Cinematic feel.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="scroll" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#0f0f1a;padding:16px;font-family:system-ui;height:180px;overflow:hidden">
+      <div style="background:linear-gradient(135deg,#667eea,#764ba2);border-radius:8px;padding:12px;margin-bottom:6px">
+        <div style="font-size:18px;font-weight:900;color:#fff">AYUSH SALUNKE</div>
+        <div style="font-size:9px;color:rgba(255,255,255,0.7)">Senior Software Engineer</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.05);border-radius:6px;padding:8px;margin-bottom:6px">
+        <div style="font-size:9px;color:#667eea;font-weight:700;margin-bottom:3px">EXPERIENCE</div>
+        <div style="font-size:8px;color:rgba(255,255,255,0.6)">JP Morgan Chase · Lead SWE</div>
+        <div style="font-size:7px;color:rgba(255,255,255,0.35)">200+ devs · 75% faster CI/CD</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.03);border-radius:6px;padding:8px">
+        <div style="font-size:9px;color:#667eea;font-weight:700;margin-bottom:3px">SKILLS</div>
+        <div style="display:flex;gap:3px;flex-wrap:wrap">
+          <span style="background:#667eea22;color:#667eea;border-radius:3px;padding:2px 5px;font-size:7px">Java</span>
+          <span style="background:#667eea22;color:#667eea;border-radius:3px;padding:2px 5px;font-size:7px">Python</span>
+          <span style="background:#667eea22;color:#667eea;border-radius:3px;padding:2px 5px;font-size:7px">GCP</span>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>Continuous Scroll</h3>
+      <p>One long page that flows naturally. Sections animate in as you scroll. More familiar, works great on mobile. Easier to skim quickly.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="hybrid" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#0f0f1a;padding:16px;font-family:system-ui;height:180px;overflow:hidden">
+      <div style="background:linear-gradient(135deg,#667eea,#764ba2);border-radius:8px;padding:12px;margin-bottom:6px;display:flex;justify-content:space-between;align-items:center">
+        <div>
+          <div style="font-size:16px;font-weight:900;color:#fff">AYUSH SALUNKE</div>
+          <div style="font-size:8px;color:rgba(255,255,255,0.7)">Senior Software Engineer</div>
+        </div>
+        <div style="font-size:22px;color:rgba(255,255,255,0.15);font-weight:900">↓</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px">
+        <div style="background:rgba(255,255,255,0.05);border-radius:5px;padding:6px">
+          <div style="font-size:8px;color:#667eea;font-weight:700">JPMC</div>
+          <div style="font-size:7px;color:rgba(255,255,255,0.5)">Lead SWE · 3yr</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.05);border-radius:5px;padding:6px">
+          <div style="font-size:8px;color:#667eea;font-weight:700">UBS</div>
+          <div style="font-size:7px;color:rgba(255,255,255,0.5)">SWE · 2yr</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.05);border-radius:5px;padding:6px">
+          <div style="font-size:8px;color:#667eea;font-weight:700">Skills</div>
+          <div style="font-size:7px;color:rgba(255,255,255,0.5)">Java · GCP · React</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.05);border-radius:5px;padding:6px">
+          <div style="font-size:8px;color:#667eea;font-weight:700">Projects</div>
+          <div style="font-size:7px;color:rgba(255,255,255,0.5)">CNN · ParkSafe</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>Full-Page Hero + Scroll</h3>
+      <p>Hero snaps full-screen with big impact. Then releases into natural scroll for the rest. Best of both — dramatic entry, easy browsing.</p>
+    </div>
+  </div>
+
+</div>
