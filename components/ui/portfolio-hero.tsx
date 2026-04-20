@@ -136,7 +136,7 @@ const CursorGlow: React.FC<{ isDark: boolean }> = ({ isDark }) => {
 };
 
 // ─── Main Component ───────────────────────────────────────────────────────────
-export default function Component() {
+export default function Component({ onEnterRoom }: { onEnterRoom?: () => void }) {
   const [isDark, setIsDark] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
@@ -413,7 +413,8 @@ export default function Component() {
         <motion.button
           type="button"
           className="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2"
-          aria-label="Scroll down"
+          aria-label="Enter room"
+          onClick={onEnterRoom}
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.4 }}
