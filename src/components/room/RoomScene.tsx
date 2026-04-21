@@ -99,9 +99,10 @@ export function RoomScene({ onClose }: { onClose?: () => void }) {
   }, [handleClose]);
 
   return (
-    <div className="fixed inset-0 bg-stone-950 z-30">
+    <div style={{ position: "fixed", inset: 0, width: "100vw", height: "100vh", background: "#1c1917", zIndex: 30 }}>
       <Canvas
         shadows
+        style={{ width: "100%", height: "100%" }}
         camera={{ position: [0, 4.5, 10], fov: 55 }}
         gl={{ antialias: true, toneMapping: THREE.ACESFilmicToneMapping, toneMappingExposure: 1.1 }}
       >
