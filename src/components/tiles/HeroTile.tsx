@@ -64,12 +64,19 @@ export function HeroTile() {
         }}
       />
       <div className="relative z-10 max-w-6xl mx-auto px-6 py-24">
+        <img
+          src={`${import.meta.env.BASE_URL}images/ayush.jpg`}
+          alt={profile.name}
+          loading="eager"
+          className="mb-8 w-28 h-28 md:w-32 md:h-32 rounded-full object-cover border border-light/15 shadow-[0_8px_32px_rgba(0,0,0,0.45)]"
+        />
         <p className="font-mono text-[11px] tracking-[0.25em] uppercase text-hero mb-6">
           Senior Software Engineer · JPMorgan Chase
         </p>
         <h1
           ref={nameRef}
-          className="display text-[clamp(3rem,12vw,10rem)] font-bold"
+          className="display text-[clamp(2.5rem,10vw,8rem)] font-bold whitespace-nowrap"
+          style={{ letterSpacing: "-0.04em" }}
           aria-label={profile.name}
         >
           {letters.map((c, i) => (

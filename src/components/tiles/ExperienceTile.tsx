@@ -84,12 +84,23 @@ export function ExperienceTile() {
             style={{ background: e.accent }}
           >
             <div className="max-w-6xl mx-auto px-8 w-full">
-              <p
+              <div
                 data-achievement
-                className="font-mono text-[11px] tracking-[0.25em] uppercase text-light/60 mb-4"
+                className="flex items-center gap-4 mb-6"
               >
-                {e.start} → {e.end}
-              </p>
+                <span className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-light/10 backdrop-blur-sm border border-light/15 overflow-hidden shrink-0">
+                  <img
+                    src={e.logo.startsWith("/") ? `${import.meta.env.BASE_URL}${e.logo.slice(1)}` : e.logo}
+                    alt={`${e.company} logo`}
+                    loading="lazy"
+                    className="w-10 h-10 object-contain"
+                    onError={(ev) => ((ev.currentTarget.style.display = "none"))}
+                  />
+                </span>
+                <p className="font-mono text-[11px] tracking-[0.25em] uppercase text-light/60">
+                  {e.start} → {e.end}
+                </p>
+              </div>
               <h3
                 data-achievement
                 className="display text-[clamp(2.5rem,8vw,7rem)] font-bold text-light"
