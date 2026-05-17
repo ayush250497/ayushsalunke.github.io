@@ -13,20 +13,34 @@ export function ExperienceTile() {
 
     const ctx = gsap.context(() => {
       const panels = railRef.current!.querySelectorAll<HTMLElement>("[data-panel]");
-      const totalTravel = (panels.length - 1) * window.innerWidth;
+      const getTravel = () => (panels.length - 1) * window.innerWidth;
 
-      gsap.to(railRef.current, {
-        x: -totalTravel,
+      // Horizontal scrub tween — finishes one screen BEFORE the pin releases,
+      // so the last panel gets a full viewport of dwell scroll instead of
+      // appearing only at the exact instant the section un-pins. Kept as a
+      // Tween (not a timeline) because containerAnimation requires a Tween.
+      const scrubTween = gsap.to(railRef.current, {
+        x: () => -getTravel(),
         ease: "none",
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top top",
-          end: `+=${panels.length * 100}%`,
-          pin: true,
+          end: () => "+=" + (panels.length - 1) * window.innerHeight,
           scrub: 1,
-          anticipatePin: 1,
           invalidateOnRefresh: true,
         },
+      });
+
+      // Pin the section for the travel PLUS one extra screen so that, after
+      // the rail stops moving, the last panel holds while you keep scrolling
+      // before it cleanly un-pins into the next section.
+      ScrollTrigger.create({
+        trigger: sectionRef.current,
+        start: "top top",
+        end: () => "+=" + panels.length * window.innerHeight,
+        pin: true,
+        anticipatePin: 1,
+        invalidateOnRefresh: true,
       });
 
       panels.forEach((panel) => {
@@ -45,7 +59,7 @@ export function ExperienceTile() {
                 trigger: panel,
                 start: "left center",
                 end: "right center",
-                containerAnimation: ScrollTrigger.getAll().find((t) => t.pin === sectionRef.current)?.animation,
+                containerAnimation: scrubTween,
                 toggleActions: "play none none reverse",
               },
             },
