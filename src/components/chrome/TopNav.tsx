@@ -4,6 +4,7 @@ import { scrollTo } from "../../lib/motion";
 const LINKS = [
   { id: "#stats", label: "Impact" },
   { id: "#now", label: "Now" },
+  { id: "#agents", label: "AI Agents" },
   { id: "#experience", label: "Experience" },
   { id: "#skills", label: "Skills" },
   { id: "#pothole", label: "Work" },

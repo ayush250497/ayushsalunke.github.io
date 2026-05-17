@@ -86,6 +86,18 @@ export type SkillCategory = { name: string; items: SkillItem[] };
 
 export const skillCategories: SkillCategory[] = [
   {
+    name: "AI & Agentic",
+    items: [
+      { name: "Claude Code", slug: "anthropic" },
+      { name: "GitHub Copilot", slug: "githubcopilot" },
+      { name: "Cursor", slug: "cursor" },
+      { name: "Codex", slug: "openai" },
+      { name: "AI Agents", slug: "anthropic" },
+      { name: "Agent Skills", slug: "anthropic" },
+      { name: "MCP Servers", slug: "modelcontextprotocol" },
+    ],
+  },
+  {
     name: "Languages",
     items: [
       { name: "TypeScript", slug: "typescript" },
@@ -189,3 +201,51 @@ export const education: School[] = [
     years: "2015 – 2019",
   },
 ];
+
+export type Agent = { name: string; role: string };
+
+export const agentTeam = {
+  eyebrow: "Internal tooling · JPMorgan Chase",
+  title: "An agentic engineering crew, bootstrapped per repo",
+  blurb:
+    "One command spins up a self-managing team of AI agents on any codebase. It builds a knowledge graph of the repo, auto-detects the stack, and runs the full loop — plan, edit, security-review, test, keep the graph live — so every engineer ships with an always-on context and review layer. Built so any team can stand up the same crew on their own repo.",
+  agents: [
+    {
+      name: "agent-manager",
+      role: "Breaks a request into tasks and delegates each to the right agent.",
+    },
+    {
+      name: "code-editor",
+      role: "Makes the code changes — always grounding decisions in the code knowledge graph first.",
+    },
+    {
+      name: "security-reviewer",
+      role: "Runs a validation report on every change and sends risks back to code-editor to fix.",
+    },
+    {
+      name: "tester",
+      role: "Auto-created for Java / Python repos. Runs unit tests on changes and reports bugs back.",
+    },
+    {
+      name: "knowledge-seeker",
+      role: "Keeps the code knowledge graph in sync as logic evolves.",
+    },
+  ] as Agent[],
+  integrations: [
+    "Terraform Registry",
+    "Confluence",
+    "Engineer Portal",
+    "Bitbucket",
+    "JIRA",
+  ],
+  usage: [
+    {
+      cmd: "/bootstrap-agents <project description>",
+      note: "generates the agents + the codebase knowledge graph",
+    },
+    {
+      cmd: "@agent-manager Understand JIRA-1234 and create a plan to implement it",
+      note: "delegate work in plain English",
+    },
+  ],
+};

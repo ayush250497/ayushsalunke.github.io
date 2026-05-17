@@ -7,6 +7,7 @@ import { CustomCursor } from "./components/chrome/CustomCursor";
 import { HeroTile } from "./components/tiles/HeroTile";
 import { StatsTile } from "./components/tiles/StatsTile";
 import { NowTile } from "./components/tiles/NowTile";
+import { AgentTeamTile } from "./components/tiles/AgentTeamTile";
 import { ExperienceTile } from "./components/tiles/ExperienceTile";
 import { SkillsTile } from "./components/tiles/SkillsTile";
 import { PotholeTile } from "./components/tiles/PotholeTile";
@@ -34,6 +35,7 @@ export default function App() {
         <HeroTile />
         <StatsTile />
         <NowTile />
+        <AgentTeamTile />
         <ExperienceTile />
         <SkillsTile />
         <PotholeTile />

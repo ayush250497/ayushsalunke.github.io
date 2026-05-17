@@ -5,6 +5,7 @@ const TILES = [
   { id: "#hero", label: "Hero", accent: "#0a84ff" },
   { id: "#stats", label: "Impact", accent: "#30d158" },
   { id: "#now", label: "Now", accent: "#5e5ce6" },
+  { id: "#agents", label: "Agentic", accent: "#bf5af2" },
   { id: "#experience", label: "Experience", accent: "#0b2545" },
   { id: "#skills", label: "Skills", accent: "#ff375f" },
   { id: "#pothole", label: "Pothole", accent: "#ff9f0a" },
